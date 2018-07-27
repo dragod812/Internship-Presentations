@@ -1,0 +1,92 @@
+C:\Users\gsaluja\Downloads\liquibase-3.6.1-bin\liquibase --defaultsFile=src/main/liquibase.properties --classpath="C:\Users\gsaluja\Downloads\mysql-connector-java-8.0.11.jar;C:\Users\gsaluja\eclipse-workspace\Demo\target\Demo-0.0.1-SNAPSHOT.jar" --changeLogFile=c:/output.xml update
+
+
+
+
+
+
+
+
+C:\Users\gsaluja\Downloads\liquibase-3.6.1-bin\liquibase 
+
+	--defaultsFile=src/main/liquibase.properties
+
+	--classpath="C:\Users\gsaluja\Downloads\mysql-connector-java-8.0.11.jar;C:\Users\gsaluja\eclipse-workspace\Demo\target\Demo-0.0.1-SNAPSHOT.jar"
+
+	--changeLogFile=src/main/db-changelog-master.xml update
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rollback 1.0
+
+updateToTag 1.1
+
+generateChangeLog
+
+run always attribute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Any change to database are grouped into "ChangeSet"
+
+Changes to database can be tagged. 
+
+Liquibase will go through changelog xml file, see if there are some change sets not in this table. If found, execute them and put a recored in this table. By using this table, liquibase can trace which changeset has already executed, which changeset is new.
+

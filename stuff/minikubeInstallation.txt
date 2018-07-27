@@ -1,0 +1,12 @@
+install virtual box
+disable hyper v
+install kubectl   https://storage.googleapis.com/kubernetes-release/release/v1.10.3/bin/windows/amd64/kubectl.exe
+install minikube
+
+minikube start
+kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
+kubectl expose deployment hello-minikube --type=NodePort
+minikube service hello-minikube --url
+
+
+docker-machine restart

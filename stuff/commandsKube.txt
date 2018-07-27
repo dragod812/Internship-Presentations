@@ -1,0 +1,50 @@
+kubeadm join 206.189.134.90:6443 --token avwb1k.oit88mloqx7e0tiu --discovery-token-ca-cert-hash sha256:cafad6a71d771b061af371afb438bbc90f2d7f4f31d635875e874a15f0b16bbf
+
+
+https://gist.github.com/stoiccoder/b0ec95c39577c31615ea86d4ba0de35e
+
+
+
+Dockerfile
+
+docker build . 
+
+docker tag node-chat dragod812/node-chat
+
+docker push dragod812/node-chat
+
+
+kubectl run node-chat --image=dragod812/node-chat:v1 --port=3000 -i
+
+kubectl expose deployment/node-chat --type="NodePort" --port 3000
+
+kubectl scale deployments/node-chat --replicas=4
+
+kubectl set image deployments/node-chat node-chat=dragod812/node-chat:v2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
